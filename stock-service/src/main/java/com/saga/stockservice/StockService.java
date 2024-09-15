@@ -44,7 +44,7 @@ public class StockService {
     private boolean checkStockForOrder(Order order) {
         // Simulate actual stock checking logic
         // For example, you can query a database or inventory system
-        return "123456".equals(order.getId()); // Assume stock is available for this example
+        return "12345".equals(order.getId()) || "125561".equals(order.getId());// Assume stock is available for this example
     }
 
     @KafkaListener(topics = "rollback_stock_topic", groupId = "stock_group")
