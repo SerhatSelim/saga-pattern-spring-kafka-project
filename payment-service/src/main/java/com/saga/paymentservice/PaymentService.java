@@ -44,7 +44,7 @@ public class PaymentService {
     private boolean processPaymentForOrder(Order order) {
         // Simulate actual payment processing logic
         // For example, call a payment gateway or bank API
-        return "12345".equals(order.getId()); // Assume payment succeeds for this example
+        return "12345".equals(order.getId()) || "125561".equals(order.getId()); // Assume payment succeeds for this example
     }
 
     @KafkaListener(topics = "rollback_payment_topic", groupId = "payment_group")
